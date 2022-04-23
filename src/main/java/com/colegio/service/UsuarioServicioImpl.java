@@ -1,5 +1,6 @@
 package com.colegio.service;
 
+import java.util.Date;
 import java.util.List;
 import java.util.Optional;
 
@@ -37,6 +38,7 @@ public class UsuarioServicioImpl implements UsuarioServicio{
 	/**************************************************************/
 	@Override
 	public Usuario insertaUsuario(Usuario obj) {
+		obj.setFechaRegistro( new Date());
 		return repositorio.save(obj);
 	}
 
