@@ -34,9 +34,9 @@ public interface UsuarioRepositorio extends JpaRepository<Usuario, Integer>{
 	public abstract Usuario listaPorCodigo(@Param("id") int codigo);
 
 	
-	@Query("Select x from Usuario x where idTipoUsuario = 3 and estado like 'activo'")
+	@Query("Select x from Usuario x where x.tipoUsuario.idTipoUsuario = 3 and x.estado like 'activo'")
 	public abstract List<Usuario> listarAlumnos() ;
 	
-	@Query("Select x from Usuario x where idTipoUsuario = 2 and estado like 'activo'")
+	@Query("Select x from Usuario x where x.tipoUsuario.idTipoUsuario = 2 and x.estado like 'activo'")
 	public abstract List<Usuario> listarDocentes() ;
 }

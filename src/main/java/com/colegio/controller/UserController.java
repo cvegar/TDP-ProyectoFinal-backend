@@ -51,10 +51,21 @@ public class UserController {
 	{
 		return ResponseEntity.ok(tipoUsuarioService.listarTipoUsuario());
 	}
-	
+
+	@GetMapping("/listaDocentes")
+	public ResponseEntity<List<Usuario>> listarDocente()
+	{
+		return ResponseEntity.ok(usuarioService.listarDocente());
+	}
+
+	@GetMapping("/listaAlumnos")
+	public ResponseEntity<List<Usuario>> listarAlumnos()
+	{
+		return ResponseEntity.ok(usuarioService.listarAlumnos());
+	}
 	
 	@GetMapping("/{id}")
-	public ResponseEntity<Usuario> CosultarParaAct(@PathVariable("id")int id)
+	public ResponseEntity<Usuario> CosultarParaAct(@PathVariable("id") int id)
 	{
 				return	ResponseEntity.ok(usuarioService.listarPorUsuario(id));
 	}
@@ -67,7 +78,6 @@ public class UserController {
 
 		usuarioHasRolPK.setIdUsuario(usuarioHasRol.getUsuario().getIdUsuario());
 		usuarioHasRolPK.setIdRol(usuarioHasRol.getUsuario().getTipoUsuario().getIdTipoUsuario());
-		//usuarioHasRolPK.setRolId(usuarioHasRol.getRol().getRolId());
 		usuarioHasRol.setUsuarioHasRolPk(usuarioHasRolPK);
 
 		UsuarioHasRol Obj = new UsuarioHasRol(usuarioHasRolPK, usuarioHasRol.getUsuario(), usuarioHasRol.getRol());
@@ -84,7 +94,6 @@ public class UserController {
 
 		usuarioHasRolPK.setIdUsuario(usuarioHasRol.getUsuario().getIdUsuario());
 		usuarioHasRolPK.setIdRol(usuarioHasRol.getUsuario().getTipoUsuario().getIdTipoUsuario());
-		//usuarioHasRolPK.setRolId(usuarioHasRol.getRol().getRolId());
 		usuarioHasRol.setUsuarioHasRolPk(usuarioHasRolPK);
 
 		UsuarioHasRol Obj = new UsuarioHasRol(usuarioHasRolPK, usuarioHasRol.getUsuario(), usuarioHasRol.getRol());

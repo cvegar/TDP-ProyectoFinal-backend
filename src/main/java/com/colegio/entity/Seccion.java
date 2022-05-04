@@ -26,6 +26,10 @@ public class Seccion {
 	@ManyToOne
 	@JoinColumn(name = "idAula")
 	private Aula aula;
+
+	@ManyToOne
+	@JoinColumn(name = "idDocente")
+	private Usuario docente;
 	
 	
 
