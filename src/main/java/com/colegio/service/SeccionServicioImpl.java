@@ -36,4 +36,14 @@ public class SeccionServicioImpl implements SeccionServicio {
 		
 	}
 
+	@Override
+	public List<Seccion> listarSeccionesMatriculadas(Integer id) {
+		return repositorio.listarSeccionesMatriculadas(id);
+	}
+
+	@Override
+	public List<Seccion> listarSecionesHabiles() {
+		return repositorio.listaCursosHabiles();
+	}
+
 }

@@ -2,6 +2,7 @@ package com.colegio.service;
 
 import java.util.List;
 
+import com.colegio.entity.Seccion;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
@@ -9,7 +10,7 @@ import com.colegio.entity.TipoUsuario;
 import com.colegio.repository.TipoUsuarioRepositorio;
 
 @Service
-public class TipoUsuarioServiceImpl implements TipoUsuarioServicio {
+public class TipoUsuarioServicioImpl implements TipoUsuarioServicio {
 	
 	@Autowired
 	private TipoUsuarioRepositorio repositorio;
@@ -34,5 +35,7 @@ public class TipoUsuarioServiceImpl implements TipoUsuarioServicio {
 		repositorio.deleteById(id);
 		
 	}*/
+
+
 
 }

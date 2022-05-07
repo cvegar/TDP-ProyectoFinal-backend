@@ -14,5 +14,11 @@ public interface SeccionServicio {
 	public abstract Optional<Seccion> buscarPorId(int id);
 	
 	public abstract void eliminarSecion(int id);
-	
+
+	public abstract List<Seccion> listarSeccionesMatriculadas(Integer id);
+
+	public abstract List<Seccion> listarSecionesHabiles();
+
+
+
 }

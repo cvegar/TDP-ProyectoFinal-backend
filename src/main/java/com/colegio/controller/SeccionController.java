@@ -36,7 +36,14 @@ public class SeccionController {
 	{
 		return ResponseEntity.ok(aulaService.listarSecion());
 	}
-	
+
+	@GetMapping("/habiles")
+	public ResponseEntity<List<Seccion>> listaSeccionesHabiles()
+	{
+		return ResponseEntity.ok(aulaService.listarSecionesHabiles());
+	}
+
+
 	@PostMapping
 	public ResponseEntity<Seccion> insertaSeccion(@RequestBody Seccion seccion)
 	{
